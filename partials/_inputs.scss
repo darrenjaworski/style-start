@@ -1,0 +1,96 @@
+.checkbox {
+  $width: 1.5em;
+  margin: 0 1em 0 0;
+  perspective: 1000000px;
+
+  cursor: pointer;
+  &:before,
+  &:after {
+    transition: all $transition_duration ease-in-out;
+    content: "";
+    position: absolute;
+    width: $width;
+    height: $width;
+    background: white;
+    border: 1px solid $grey;
+  }
+  &:after {
+    z-index: 0;
+  }
+  &:before {
+    z-index: 1;
+  }
+  &:checked {
+    &:before {
+      transform: rotateY(180deg);
+      background: $secondary_nav_bg;
+      border: 1px solid $secondary_nav_bg;
+      z-index: 10;
+    }
+  }
+}
+
+input, textarea {
+  box-sizing: border-box;
+  padding: .75em;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $placeholder;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder;
+}
+
+.input-block {
+  width: 100%;
+  @include clearfix;
+  position: relative;
+  margin-bottom: 1em;
+  @media ($breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.checkbox-block {
+  height: auto;
+  @include clearfix;
+  @media ($breakpoint) {
+    margin-bottom: 1em;
+  }
+}
+
+.checkbox {
+  border: none;
+  position: absolute;
+  width: 20px;
+  top: 0;
+  @media ($breakpoint) {
+    top: .5em;
+  }
+}
+
+.submit {
+  transition: all $transition_duration;
+  background: $primary_blue;
+  color: white;
+  &:hover {
+    background: white;
+    color: $primary_blue;
+  }
+  border: 1px solid $primary_blue;
+  padding: 1.25em 0;
+  margin-top: 2em;
+}

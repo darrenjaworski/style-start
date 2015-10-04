@@ -1,0 +1,83 @@
+html {
+  font-family: $font_stack;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  color: $font_color;
+}
+
+@if $header_font_stack != null {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $header_font_stack;
+  }
+}
+
+@mixin font-size($size) {
+  font-size: 0rem + $size / $doc-font-size;
+  line-height: ceil($size / $doc-line-height) * ($doc-line-height / $size);
+  margin-top: ($doc-line-height / $doc-font-size * .8) +rem;
+  margin-bottom: ($doc-line-height / $doc-font-size) +rem;
+  @media ($breakpoint) {
+    font-size: 0rem + $size / $doc-font-size * .9;
+    margin-top: ($doc-line-height / $doc-font-size * .7) +rem;
+    margin-bottom: ($doc-line-height / $doc-font-size * .8) +rem;
+  }
+}
+
+h1 {
+  @include font-size($h1_size);
+  font-weight: $h1_weight;
+}
+
+h2 {
+  @include font-size($h2_size);
+  font-weight: $h2_weight;
+}
+
+h3 {
+  @include font-size($h3_size);
+  font-weight: $h3_weight;
+}
+
+h4 {
+  @include font-size($h4_size);
+  font-weight: $h4_weight;
+}
+
+h5 {
+  @include font-size($h5_size);
+  font-weight: $h5_weight;
+}
+
+h6 {
+  @include font-size($h6_size);
+  font-weight: $h6_weight;
+}
+
+p {
+  @include font-size($p_size);
+  font-weight: $p_weight;
+  margin-bottom: 0;
+}
+
+li {
+  @include font-size($li_size);
+  font-weight: $li_weight;
+}
+
+th {
+  @include font-size($th_size);
+  font-weight: $th_weight;
+}
+
+td {
+  @include font-size($td_size);
+  font-weight: $td_weight;
+}
