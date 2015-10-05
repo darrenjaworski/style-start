@@ -12,7 +12,7 @@
     width: $width;
     height: $width;
     background: white;
-    border: 1px solid $grey;
+    border: 1px solid $font_color;
   }
   &:after {
     z-index: 0;
@@ -23,8 +23,8 @@
   &:checked {
     &:before {
       transform: rotateY(180deg);
-      background: $secondary_nav_bg;
-      border: 1px solid $secondary_nav_bg;
+      background: white;
+      border: 1px solid white;
       z-index: 10;
     }
   }
@@ -84,13 +84,13 @@ input, textarea {
 
 .submit {
   transition: all $transition_duration;
-  background: $primary_blue;
+  background: white;
   color: white;
   &:hover {
     background: white;
-    color: $primary_blue;
+    color: white;
   }
-  border: 1px solid $primary_blue;
+  border: 1px solid white;
   padding: 1.25em 0;
   margin-top: 2em;
 }

@@ -13,22 +13,37 @@
 
 .half {
   @include span(6 of 12);
+  &.space {
+    @include span(1 of 2);
+  }
 }
 
 .third {
   @include span(4 of 12);
+  &.space {
+    @include span(1 of 3);
+  }
 }
 
 .fourth {
   @include span(3 of 12);
+  &.space {
+    @include span(1 of 4);
+  }
 }
 
 .fifth {
   @include span(2 of 10);
+  &.space {
+    @include span(1 of 5);
+  }
 }
 
 .sixth {
   @include span(2 of 12);
+  &.space {
+    @include span(1 of 6);
+  }
 }
 
 .last {

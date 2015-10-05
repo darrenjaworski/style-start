@@ -7,5 +7,5 @@
 @import "partials/typography";
 @import "partials/inputs";
 
-@import $path_to_susy;
+@import "./bower_components/susy/sass/susy";
 @import "partials/layout.scss";
