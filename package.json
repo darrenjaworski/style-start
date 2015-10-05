@@ -1,0 +1,32 @@
+{
+  "name": "style-start",
+  "version": "0.0.1",
+  "description": "Style starter kit.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrenjaworski/style-start.git"
+  },
+  "keywords": [
+    "CSS",
+    "SASS",
+    "SUSY"
+  ],
+  "author": "Darren Jaworski <darrenjaworski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darrenjaworski/style-start/issues"
+  },
+  "homepage": "https://github.com/darrenjaworski/style-start#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

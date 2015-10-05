@@ -1,0 +1,27 @@
+{
+  "name": "style-start",
+  "version": "0.0.1",
+  "homepage": "https://github.com/darrenjaworski/style-start",
+  "authors": [
+    "Darren Jaworski <darrenjaworski@gmail.com>"
+  ],
+  "description": "Style starter kit.",
+  "main": "style.css",
+  "moduleType": [],
+  "keywords": [
+    "CSS",
+    "SASS",
+    "SUSY"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.6"
+  }
+}
