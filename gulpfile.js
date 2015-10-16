@@ -19,7 +19,7 @@ gulp.task('build-css', function() {
 
 gulp.task('watch', function(){
 
-  gulp.watch('.**/*.scss', ['build-css']);
+  gulp.watch(['./partials/*.scss', '*.scss'], ['build-css']);
 
 });
 
