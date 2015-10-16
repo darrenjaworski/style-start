@@ -48,4 +48,5 @@
 
 .last {
   @include last;
+  clear: right;
 }
