@@ -9,44 +9,166 @@
 
 .full {
   @include full;
+  margin-bottom: gutter(12);
 }
 
 .half {
   @include span(6 of 12);
+  margin-bottom: gutter(12);
   &.space {
     @include span(1 of 2);
+    margin-bottom: gutter(2);
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
   }
 }
 
 .third {
   @include span(4 of 12);
+  margin-bottom: gutter(12);
   &.space {
     @include span(1 of 3);
+    margin-bottom: gutter(3);
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
   }
 }
 
 .fourth {
   @include span(3 of 12);
+  margin-bottom: gutter(12);
   &.space {
     @include span(1 of 4);
+    margin-bottom: gutter(4);
+  }
+  @media (max-width: $breakpoint_em + 15) {
+    @include span(6 of 12);
+    &.space {
+      @include span(2 of 4);
+      margin-bottom: gutter(4);
+      &:nth-of-type(2n + 1) {
+        clear: left;
+      }
+    }
+    &:nth-of-type(2n) {
+      @include last;
+      margin-bottom: gutter(12);
+    }
+    &:nth-of-type(2n + 1) {
+      clear: left;
+    }
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
   }
 }
 
 .fifth {
   @include span(2 of 10);
+  margin-bottom: gutter(10);
   &.space {
     @include span(1 of 5);
+    margin-bottom: gutter(5);
+  }
+  @media (max-width: $breakpoint_em + 15) {
+    @include span(4 of 12);
+    margin-bottom: gutter(12);
+    &.space {
+      @include span(1 of 3);
+      margin-bottom: gutter(3);
+      &:nth-of-type(3n + 1) {
+        clear: left;
+      }
+      &:nth-of-type(5n) {
+        @include span(1 of 3);
+      }
+    }
+    &:nth-of-type(3n) {
+      @include last;
+    }
+    &:nth-of-type(3n + 1) {
+      clear: left;
+    }
+    &:nth-of-type(5n) {
+      @include span(4 of 12);
+    }
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+      &:nth-of-type(5n) {
+        @include full;
+      }
+    }
+    &:nth-of-type(5n) {
+      @include full;
+      margin-bottom: gutter(12);
+    }
   }
 }
 
 .sixth {
   @include span(2 of 12);
+  margin-bottom: gutter(12);
   &.space {
     @include span(1 of 6);
+    margin-bottom: gutter(6);
+  }
+  @media (max-width: $breakpoint_em + 15) {
+    @include span(4 of 12);
+    margin-bottom: gutter(12);
+    &.space {
+      @include span(1 of 3);
+      margin-bottom: gutter(3);
+      &:nth-of-type(3n + 1) {
+        clear: left;
+      }
+    }
+    &:nth-of-type(3n) {
+      @include last;
+    }
+    &:nth-of-type(3n + 1) {
+      clear: left;
+    }
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
   }
 }
 
 .last {
   @include last;
   clear: right;
+  &.space {
+    @include last;
+  }
+}
+
+.row {
+  clear: left;
 }
