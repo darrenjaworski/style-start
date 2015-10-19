@@ -1,0 +1,25 @@
+.half {
+  background: lighten(black, 50%);
+}
+
+.third {
+  background: lighten(black, 60%);
+}
+
+.fourth {
+  background: lighten(black, 70%);
+}
+
+.fifth {
+  background: lighten(black, 50%);
+}
+
+.sixth {
+  background: lighten(black, 60%);
+}
+
+form {
+  .fourth {
+    background: transparent;
+  }
+}

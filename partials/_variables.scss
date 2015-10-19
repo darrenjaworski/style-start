@@ -1,4 +1,3 @@
-$path_to_susy: "../bower_components/susy/sass/susy";
 $container_width: 60em;
 $container_padding: 1.5em;
 
@@ -7,7 +6,7 @@ $breakpoint: unquote('max-width: ' + $breakpoint_em);
 
 $transition_duration: .5s;
 
-$font_color: black;
+$font_color: transparentize(black, .3);
 $font_stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $header_font_stack: null;
 $doc-font-size: 16;
@@ -43,4 +42,13 @@ $th_weight: 600;
 $td_size: 15;
 $td_weight: 400;
 
+$table_font_color: white;
+$table_header_background: darken(grey, 10%);
+$table_body_background: grey;
+
 $placeholder: lighten($font_color, 20%);
+$input_font_color: white;
+
+$input_border_color: grey;
+$input_border: 1px solid $input_border_color;
+$input_background: lighten(grey, 10%);
