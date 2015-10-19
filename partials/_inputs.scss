@@ -7,6 +7,7 @@ input, textarea, select {
   border: $input_border;
   background: $input_background;
   color: $input_font_color;
+  border-radius: 0;
   &::-webkit-input-placeholder {
     color: $placeholder;
   }
