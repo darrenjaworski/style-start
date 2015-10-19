@@ -1,0 +1,23 @@
+table {
+  th, td {
+    text-align: left;
+    padding: .5em;
+  }
+  thead {
+    background: $table_header_background;
+    border-bottom: .5em solid white;
+  }
+  tbody {
+    background: $table_body_background;
+    tr {
+      &:hover {
+        background: darken($table_body_background, 5%);
+      }
+      td {
+        &:hover {
+          background: darken($table_body_background, 10%);
+        }
+      }
+    } // end tr
+  } // end tbody
+}
