@@ -22,12 +22,20 @@ html {
 @mixin font-size($size) {
   font-size: 0rem + $size / $doc-font-size;
   line-height: ceil($size / $doc-line-height) * ($doc-line-height / $size);
-  margin-top: ($doc-line-height / $doc-font-size * .8) +rem;
-  margin-bottom: ($doc-line-height / $doc-font-size) +rem;
+  margin-top: 0;
+  @if $size / $doc-font-size > 1 {
+    margin-bottom: .6em;
+  } @else {
+    margin-bottom: 1em;
+  }
   @media ($breakpoint) {
     font-size: 0rem + $size / $doc-font-size * .9;
-    margin-top: ($doc-line-height / $doc-font-size * .7) +rem;
-    margin-bottom: ($doc-line-height / $doc-font-size * .8) +rem;
+    margin-top: 0;
+    @if $size / $doc-font-size * .9 > 1 {
+      margin-bottom: .5em;
+    } @else {
+      margin-bottom: .75em;
+    }
   }
 }
 
@@ -64,12 +72,18 @@ h6 {
 p {
   @include font-size($p_size);
   font-weight: $p_weight;
-  margin-bottom: 0;
+}
+
+ul {
+  margin: 0 0 1em 0;
+  padding-left: 1em;
 }
 
 li {
+  list-style: none;
   @include font-size($li_size);
   font-weight: $li_weight;
+  margin-bottom: 0;
 }
 
 th {
@@ -80,4 +94,11 @@ th {
 td {
   @include font-size($td_size);
   font-weight: $td_weight;
+}
+
+@if $table_font_color != null {
+  th,
+  td {
+    color: $table_font_color;
+  }
 }
