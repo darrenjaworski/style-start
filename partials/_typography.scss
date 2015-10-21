@@ -74,6 +74,18 @@ p {
   font-weight: $p_weight;
 }
 
+a {
+  color: $link_color;
+  &:hover {
+    color: $link_hover_color;
+  }
+  @if $link_underline {
+    text-decoration: underline;
+  } @else {
+    text-decoration: none;
+  }
+}
+
 ul {
   margin: 0 0 1em 0;
   padding-left: 1em;

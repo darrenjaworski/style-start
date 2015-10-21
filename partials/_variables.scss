@@ -12,6 +12,10 @@ $header_font_stack: null;
 $doc-font-size: 16;
 $doc-line-height: 24;
 
+$link_color: lighten($font_color, 20%);
+$link_hover_color: lighten($font_color, 10%);
+$link_underline: false;
+
 $h1_size: 38;
 $h1_weight: 400;
 
