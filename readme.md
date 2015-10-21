@@ -6,3 +6,9 @@ This is an agnostic style start for your next project. Contains html5bp default 
 - browser prefixer provided by autoprefixer
 
 Styleguide previews typography, layout and forms.
+
+## build
+
+```bash
+$ npm install && bower install
+```
