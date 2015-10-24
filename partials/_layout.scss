@@ -46,6 +46,23 @@
   }
 }
 
+.two-third {
+  @include span(8 of 12);
+  margin-bottom: gutter(12);
+  &.space {
+    @include span(2 of 3);
+    margin-bottom: gutter(3);
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
+  }
+}
+
 .fourth {
   @include span(3 of 12);
   margin-bottom: gutter(12);
@@ -171,4 +188,5 @@
 
 .row {
   clear: left;
+  @include clearfix;
 }
