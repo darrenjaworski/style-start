@@ -1,0 +1,99 @@
+#toggle {
+  height: $toggle_size;
+  width: $toggle_size;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $toggle_bg_color;
+  z-index: 10;
+  &:hover {
+    .hamburger {
+      &:before {
+        top: -1 * ($toggle_size - $hamburger_height) / 3.5;
+      }
+      &:after {
+        top: ($toggle_size - $hamburger_height) / 3.5;
+      }
+    }
+  }
+  &.active {
+    .hamburger {
+      background: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.hamburger {
+  top: ($toggle_size - $hamburger_height) / 2;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  &:after,
+  &:before {
+    content: "";
+    left: 0;
+    width: 100%;
+  }
+  &:before {
+    top: -1 * ($toggle_size - $hamburger_height) / 4.25;
+  }
+  &:after {
+    top: ($toggle_size - $hamburger_height) / 4.25;
+  }
+}
+
+.hamburger,
+.hamburger:after,
+.hamburger:before {
+  background: $hamburger_color;
+  height: $hamburger_height;
+  position: absolute;
+  transition: all .25s;
+  @if $hamburger_border_radius != null {
+    border-radius: 3px;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  &.active {
+    bottom: 0;
+    right: 0;
+    ul {
+      left: auto;
+    }
+  }
+  ul {
+    @include accessible;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: white;
+    overflow: scroll;
+  }
+  li {
+    &:first-child {
+      margin-top: 10%;
+    }
+  }
+  a {
+    font-size: 40px;
+    @media ($breakpoint) {
+      font-size: 28px;
+    }
+  }
+}

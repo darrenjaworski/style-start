@@ -56,3 +56,10 @@ $input_font_color: white;
 $input_border_color: grey;
 $input_border: 1px solid $input_border_color;
 $input_background: lighten(grey, 10%);
+
+$toggle_size: 46px;
+$hamburger_height: 4px;
+$toggle_bg_color: lighten(grey, 20%);
+$hamburger_color: white;
+$transition_duration: .5s;
+$hamburger_border_radius: null;
