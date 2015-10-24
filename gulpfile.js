@@ -13,7 +13,7 @@ gulp.task('build-css', function() {
     }))
     .pipe(minify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./'));
 
 });
 
