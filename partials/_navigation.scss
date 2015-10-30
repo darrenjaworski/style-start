@@ -34,10 +34,10 @@
     &:hover {
       .hamburger {
         &:before {
-          transform: rotate(38deg);
+          transform: rotate(40deg);
         }
         &:after {
-          transform: rotate(-38deg);
+          transform: rotate(-40deg);
         }
       }
     }
