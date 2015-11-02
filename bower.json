@@ -6,7 +6,10 @@
     "Darren Jaworski <darrenjaworski@gmail.com>"
   ],
   "description": "Style starter kit.",
-  "main": "style.min.css",
+  "main": [
+    "style.min.css",
+    "main.js"
+  ],
   "moduleType": [],
   "keywords": [
     "CSS",
