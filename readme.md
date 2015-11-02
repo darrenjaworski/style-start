@@ -12,3 +12,9 @@ Styleguide previews typography, layout and forms.
 ```bash
 $ npm install && bower install
 ```
+
+Available on bower.
+
+```bash
+$ bower install style-start --save
+```
