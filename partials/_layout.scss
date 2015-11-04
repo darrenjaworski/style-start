@@ -19,6 +19,9 @@
     @include span(1 of 2);
     margin-bottom: gutter(2);
   }
+  &:nth-of-type(2n + 1) {
+    clear: left;
+  }
   @media ($breakpoint) {
     @include full;
     margin-bottom: gutter(12);
@@ -34,6 +37,26 @@
   margin-bottom: gutter(12);
   &.space {
     @include span(1 of 3);
+    margin-bottom: gutter(3);
+  }
+  &:nth-of-type(3n + 1) {
+    clear: left;
+  }
+  @media ($breakpoint) {
+    @include full;
+    margin-bottom: gutter(12);
+    &.space {
+      @include full;
+      margin-bottom: gutter(12);
+    }
+  }
+}
+
+.two-third {
+  @include span(8 of 12);
+  margin-bottom: gutter(12);
+  &.space {
+    @include span(2 of 3);
     margin-bottom: gutter(3);
   }
   @media ($breakpoint) {
@@ -171,4 +194,5 @@
 
 .row {
   clear: left;
+  @include clearfix;
 }
