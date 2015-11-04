@@ -8,7 +8,7 @@
 }
 
 .full {
-  @include full;
+  @include span(12 last of 12);
   margin-bottom: gutter(12);
 }
 

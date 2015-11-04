@@ -22,6 +22,7 @@
     "tests"
   ],
   "devDependencies": {
-    "susy": "~2.2.6"
+    "susy": "~2.2.6",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }

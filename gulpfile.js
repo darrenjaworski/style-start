@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 gulp.task('build-css', function() {
 
-  gulp.src('./style.scss')
+  gulp.src('style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 25 versions']
