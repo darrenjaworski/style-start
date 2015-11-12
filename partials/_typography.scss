@@ -26,7 +26,7 @@ html {
   margin-bottom: .75rem;
   @media ($breakpoint) {
     font-size: 0rem + $size / $doc-font-size * .9;
-    margin-bottom: .75em * .9;
+    margin-bottom: .75rem * .9;
   }
 }
 
