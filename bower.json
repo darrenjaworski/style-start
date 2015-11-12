@@ -8,7 +8,8 @@
   "description": "Style starter kit.",
   "main": [
     "style.min.css",
-    "main.js"
+    "main.js",
+    "main.jquery.js"
   ],
   "moduleType": [],
   "keywords": [
