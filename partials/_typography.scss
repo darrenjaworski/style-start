@@ -21,9 +21,9 @@ html {
 
 @mixin font-size($size) {
   font-size: 0rem + $size / $doc-font-size;
-  line-height: ceil($size / $doc-line-height) * ($doc-line-height / $size);
+  line-height: $doc-line-height / $doc-font-size;
   margin-top: 0;
-  margin-bottom: .75em;
+  margin-bottom: .75rem;
   @media ($breakpoint) {
     font-size: 0rem + $size / $doc-font-size * .9;
     margin-bottom: .75em * .9;
