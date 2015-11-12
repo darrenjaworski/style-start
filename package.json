@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/darrenjaworski/style-start#readme",
   "devDependencies": {
+    "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-minify-css": "^1.2.1",

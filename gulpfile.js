@@ -2,7 +2,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   minify = require('gulp-minify-css'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  browserSync = require('browser-sync').create();
 
 gulp.task('build-css', function() {
 
@@ -13,7 +14,18 @@ gulp.task('build-css', function() {
     }))
     .pipe(minify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream());
+
+});
+
+gulp.task('serve', function() {
+
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
 
 });
 
@@ -23,4 +35,4 @@ gulp.task('watch', function(){
 
 });
 
-gulp.task('default', ['build-css']);
+gulp.task('default', ['build-css', 'serve', 'watch']);
