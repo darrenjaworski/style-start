@@ -184,6 +184,31 @@
   }
 }
 
+.gallery-two {
+  @include gallery(6 of 12);
+  margin-bottom: gutter(12);
+}
+
+.gallery-three {
+  @include gallery(4 of 12);
+  margin-bottom: gutter(12);
+}
+
+.gallery-four {
+  @include gallery(3 of 12);
+  margin-bottom: gutter(12);
+}
+
+.gallery-five {
+  @include gallery(2 of 10);
+  margin-bottom: gutter(10);
+}
+
+.gallery-six {
+  @include gallery(2 of 12);
+  margin-bottom: gutter(12);
+}
+
 .last {
   @include last;
   clear: right;
