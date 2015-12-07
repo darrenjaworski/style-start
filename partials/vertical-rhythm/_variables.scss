@@ -1,0 +1,50 @@
+// Forked from https://github.com/vicompany/vertical-rhythm/blob/master/scss/_variables.scss
+// Typography
+//
+
+// Typefaces
+$typeface-display: Arial, sans-serif;
+$typeface-body: Arial, sans-serif;
+$typeface-mono: Consolas, Lucida Console, monospace;
+
+// Base
+// Golden Ratio Typography Calculator: http://www.pearsonified.com/typography
+$px-font-size: $doc-font-size; // F.e. 16
+$px-line-height: $doc-line-height; // F.e. 24
+
+$base-font-size: ($px-font-size / 16) * 1rem;
+$base-line-height: ($px-line-height / $px-font-size);
+
+$rhythm: ($base-font-size * $base-line-height);
+$rhythm-offset: 0.75; // Unitless value relative to 1em.
+
+// Cap height
+// This value may vary for each font and base setting. Unitless value relative to 1em.
+$cap-height: 0.0125; // F.e. 0.02
+
+// Headers and paragraphs
+// The leaders and trailers are calculated in rhythm rows.
+$header-leader: 0.5;
+$header-trailer: 0;
+
+$paragraph-leader: 0;
+$paragraph-trailer: 1;
+
+// Modular scale
+$modular-scale: $typography-scale; // See "functions/calc-font-sizes" for all preset scales
+$font-sizes:  (xs, s, m, l, xl, xxl);
+$font-size-default: s;
+
+// Font sizes
+$font-sizes: calc-font-sizes($modular-scale, $font-sizes, $font-size-default);
+
+$font-size-xs: map-get($font-sizes, xs);
+$font-size-s: map-get($font-sizes, s);
+$font-size-m: map-get($font-sizes, m);
+$font-size-l: map-get($font-sizes, l);
+$font-size-xl: map-get($font-sizes, xl);
+$font-size-xxl: map-get($font-sizes, xxl);
+
+// Weights
+$font-weight-normal: 400;
+$font-weight-bold: 700;

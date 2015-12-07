@@ -82,6 +82,7 @@ nav {
   &.active {
     bottom: 0;
     right: 0;
+    z-index: 10;
     ul {
       left: auto;
     }
@@ -97,6 +98,10 @@ nav {
     text-align: left;
     background: white;
     overflow: scroll;
+    li {
+      line-height: 1.25;
+      list-style: none;
+    }
     @media ($breakpoint) {
       padding-left: $container_padding;
     }

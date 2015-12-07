@@ -19,50 +19,44 @@ html {
   }
 }
 
-@mixin font-size($size) {
-  font-size: 0rem + $size / $doc-font-size;
-  line-height: $doc-line-height / $doc-font-size;
-  margin-top: 0;
-  margin-bottom: .75rem;
-  @media ($breakpoint) {
-    font-size: 0rem + $size / $doc-font-size * .9;
-    margin-bottom: .75rem * .9;
-  }
-}
-
 h1 {
-  @include font-size($h1_size);
   font-weight: $h1_weight;
 }
 
 h2 {
-  @include font-size($h2_size);
   font-weight: $h2_weight;
 }
 
 h3 {
-  @include font-size($h3_size);
   font-weight: $h3_weight;
 }
 
 h4 {
-  @include font-size($h4_size);
   font-weight: $h4_weight;
 }
 
 h5 {
-  @include font-size($h5_size);
   font-weight: $h5_weight;
 }
 
 h6 {
-  @include font-size($h6_size);
   font-weight: $h6_weight;
 }
 
 p {
-  @include font-size($p_size);
   font-weight: $p_weight;
+}
+
+li {
+  font-weight: $li_weight;
+}
+
+th {
+  font-weight: $th_weight;
+}
+
+td {
+  font-weight: $td_weight;
 }
 
 a {
@@ -77,26 +71,9 @@ a {
   }
 }
 
-ul {
+ul, ol {
   margin: 0 0 1em 0;
-  padding-left: 1em;
-}
-
-li {
-  list-style: none;
-  @include font-size($li_size);
-  font-weight: $li_weight;
-  margin-bottom: 0;
-}
-
-th {
-  @include font-size($th_size);
-  font-weight: $th_weight;
-}
-
-td {
-  @include font-size($td_size);
-  font-weight: $td_weight;
+  padding-left: 1.5em;
 }
 
 @if $table_font_color != null {
@@ -104,4 +81,46 @@ td {
   td {
     color: $table_font_color;
   }
+}
+
+// Forked from https://github.com/vicompany/vertical-rhythm/blob/master/scss/vertical-rhythm.scss
+// Typography
+//
+
+h1 {
+	@include vertical-rhythm($font-size-xl);
+}
+
+h2 {
+	@include vertical-rhythm($font-size-l);
+}
+
+h3 {
+	@include vertical-rhythm($font-size-m);
+}
+
+h4,
+h5,
+h6,
+p,
+code,
+dl,
+ol,
+ul,
+th,
+td {
+	@include vertical-rhythm($font-size-s);
+}
+
+code {
+	font-family: $typeface-mono;
+}
+
+small {
+	@include vertical-rhythm($font-size-xs);
+	display: block;
+}
+
+blockquote {
+	@include vertical-rhythm($font-size-m);
 }

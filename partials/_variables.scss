@@ -9,41 +9,23 @@ $transition_duration: .5s;
 $font_color: transparentize(black, .3);
 $font_stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $header_font_stack: null;
-$doc-font-size: 16;
-$doc-line-height: 24;
+$doc-font-size: 20;
+$doc-line-height: 30;
+$typography-scale: 'augmented fourth';
 
 $link_color: lighten($font_color, 20%);
 $link_hover_color: lighten($font_color, 10%);
 $link_underline: false;
 
-$h1_size: 38;
 $h1_weight: 400;
-
-$h2_size: 34;
 $h2_weight: 400;
-
-$h3_size: 30;
 $h3_weight: 600;
-
-$h4_size: 24;
 $h4_weight: 600;
-
-$h5_size: 20;
 $h5_weight: 400;
-
-$h6_size: 17;
 $h6_weight: 400;
-
-$p_size: 16;
 $p_weight: 400;
-
-$li_size: 16;
 $li_weight: 400;
-
-$th_size: 15;
 $th_weight: 600;
-
-$td_size: 15;
 $td_weight: 400;
 
 $table_font_color: white;

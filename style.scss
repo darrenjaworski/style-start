@@ -4,7 +4,12 @@
 @import "partials/utilities";
 @import "partials/variables";
 
+@import "partials/vertical-rhythm/calc-font-sizes";
+@import "partials/vertical-rhythm/variables";
+@import "partials/vertical-rhythm/vertical-rhythm";
+
 @import "partials/typography";
+
 @import "partials/inputs";
 @import "partials/table";
 
